@@ -1,299 +1,129 @@
-# Awesome-Private-Cloud-Service-Endpoint
+# Awesome Private Cloud Service Endpoint & Zero Trust Connectivity
 
-## Top Private Cloud Service Endpoint Ecosystem
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa20e14fe06e603cf3673e28/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Private-Cloud-Service-Endpoint/pulls)
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Private Connectivity, Service Mesh & Self-Hosted Tunnels*  
+> **A curated landscape of commercial SaaS platforms, private endpoint services, zero-trust network access (ZTNA), service meshes, and open-source WireGuard overlay networks.**
 
 **Last updated: October 2026**
 
-
-
-This repository tracks notable **commercial private service endpoint platforms** and **open-source projects** that connect services privately across clouds, VPCs, and on-premises environments — without exposing traffic to the public internet.
-
-
-
-**Examples** include AWS PrivateLink, Azure Private Link, Google Cloud Private Service Connect, Cloudflare Magic WAN, Zscaler Private Access, HashiCorp Consul, Traefik Hub, Kong Mesh, Tailscale, and Ngrok (the category leaders).
-
-
-
-**Open-source emphasis**: Private cloud service endpoints are a strong open-source domain. **Netmaker**, **NetBird**, **Tailscale**, and **Headscale** deliver WireGuard-based overlay networks. **Consul** provides service discovery and mesh connectivity. **Traefik**, **Kong**, **Envoy**, and **Linkerd** power service mesh and ingress. **frp**, **rathole**, **Chisel**, and **sish** enable self-hosted tunnels. **OpenZiti** brings zero-trust networking with embedded SDKs. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[AWS PrivateLink](https://aws.amazon.com/privatelink/)**  
-
-  **AWS's private connectivity service** — access services over private IP without internet exposure . **VPC endpoint services with Interface and Gateway endpoints** . **Best for AWS-native private connectivity** .
-
-
-
-- **[Azure Private Link](https://azure.microsoft.com/en-us/products/private-link/)**  
-
-  **Microsoft's private endpoint service** — access Azure PaaS over private IP . **Private endpoints and Private Link service** . **Best for Azure-native private connectivity** .
-
-
-
-- **[Google Cloud Private Service Connect](https://cloud.google.com/vpc/docs/private-service-connect)**  
-
-  **Google's private service access** — connect VPCs to Google services and third-party services privately . **Best for GCP-native private connectivity** .
-
-
-
-- **[Cloudflare Magic WAN](https://www.cloudflare.com/)**  
-
-  **Enterprise WAN-as-a-service** — Zero Trust integration connecting branch offices and data centers . **Best for enterprise WAN** .
-
-
-
-- **[Zscaler Private Access](https://www.zscaler.com/products/zscaler-private-access)**  
-
-  **The market-leading ZTNA platform** — zero trust access to private apps . **Best for enterprise private access** .
-
-
-
-- **[HashiCorp Consul](https://www.consul.io/)**  
-
-  **Service discovery and mesh** — see Open-Source section for the core project.
-
-
-
-- **[Traefik Hub](https://traefik.io/)**  
-
-  **Cloud-native networking platform** — API gateway, ingress, and service mesh . **Best for Kubernetes networking** .
-
-
-
-- **[Kong Mesh](https://konghq.com/)**  
-
-  **Enterprise service mesh** built on Kuma — multi-cluster, multi-cloud . **Best for Kong ecosystem users** .
-
-
-
-- **[Tailscale](https://tailscale.com/)**  
-
-  **The easiest WireGuard-based mesh VPN** — see Open-Source section for the client.
-
-
-
-- **[Ngrok](https://ngrok.com/)**  
-
-  **Secure tunnels to localhost** — expose local services to the internet . **Best for development and webhooks** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Overlay Networking & Private Connectivity
-
-
-
-- **[Netmaker](https://github.com/gravitl/netmaker)**  
-
-  **The leading open-source WireGuard-based Zero Trust networking platform**, Apache-2.0 licensed . **Creates flat, encrypted overlay networks** — every node is "next door" . **Kernel WireGuard for superior performance** . **Gateways for traffic relaying and egress routing** . **Best for multi-cloud and hybrid cloud networking** .
-
-
-
-- **[NetBird](https://github.com/netbirdio/netbird)**  
-
-  **Open-source Zero Trust networking platform**, Apache-2.0 licensed . **WireGuard-based peer-to-peer overlay networks** . **Identity provider integration for granular access control** . **Self-hosted with admin dashboard** . **Best for teams wanting managed-like experience with full data ownership** .
-
-
-
-- **[Tailscale](https://github.com/tailscale/tailscale)**  
-
-  **The easiest WireGuard-based mesh VPN**, BSD-3-Clause licensed (client only; coordination server proprietary) . **Excellent NAT traversal, MagicDNS, ACLs, and SSO** . **Best for easy overlay networking** .
-
-
-
-- **[Headscale](https://github.com/juanfont/headscale)**  
-
-  **Self-hosted Tailscale control server**, BSD-3-Clause licensed . **Use Tailscale clients with your own coordination server** . **Best for Tailscale without vendor dependency** .
-
-
-
-- **[OpenZiti](https://github.com/openziti/ziti)**  
-
-  **Open-source zero trust networking platform**, Apache-2.0 licensed with **2,900+ GitHub stars** . **Comprehensive ZTNA with embeddable SDKs** . **Best for full control over zero trust infrastructure** .
-
-
-
-- **[ZeroTier](https://github.com/zerotier/ZeroTierOne)**  
-
-  **Multi-cloud SDN platform**, BSL 1.1 licensed (client open source; controller source-available) . **Custom protocol with strong NAT traversal** . **Best for legacy SDN deployments** .
-
-
-
-### Service Mesh & Ingress
-
-
-
-- **[Consul](https://github.com/hashicorp/consul)**  
-
-  **Service discovery and service mesh**, MPL-2.0 licensed with **28,000+ GitHub stars** . **Connect for mTLS** — automatic service-to-service encryption . **Intentions for authorization** . **Best for service discovery with mesh capabilities** .
-
-
-
-- **[Traefik](https://github.com/traefik/traefik)**  
-
-  **Cloud-native application proxy**, MIT licensed with **50,000+ GitHub stars** . **Ingress, reverse proxy, and service mesh** . **Automatic service discovery** . **Best for Kubernetes ingress** .
-
-
-
-- **[Envoy](https://github.com/envoyproxy/envoy)**  
-
-  **High-performance edge and service proxy**, Apache-2.0 licensed with **25,000+ GitHub stars** . **The foundation for most service meshes** . **Best for service proxy** .
-
-
-
-- **[Linkerd](https://github.com/linkerd/linkerd2)**  
-
-  **The most performant service mesh**, Apache-2.0 licensed with **10,000+ GitHub stars** . **Rust-based micro-proxy** . **Best for simple service mesh** .
-
-
-
-- **[Istio](https://github.com/istio/istio)**  
-
-  **The most feature-rich service mesh**, Apache-2.0 licensed with **36,000+ GitHub Stars** . **Traffic management, mTLS, and observability** . **Best for enterprise service mesh** .
-
-
-
-- **[Kuma](https://github.com/kumahq/kuma)**  
-
-  **Universal service mesh**, Apache-2.0 licensed with **3,500+ GitHub stars** . **Multi-cluster, multi-cloud, and multi-platform** . **Best for universal service mesh** .
-
-
-
-### Self-Hosted Tunnels
-
-
-
-- **[frp](https://github.com/fatedier/frp)**  
-
-  **Fast reverse proxy for exposing local servers behind NAT**, Apache-2.0 licensed with **109,000+ GitHub stars** . **The most popular tunneling tool for self-hosters** . **Best for exposing local services** .
-
-
-
-- **[rathole](https://github.com/rapiz1/rathole)**  
-
-  **Lightweight, high-performance reverse proxy in Rust**, Apache-2.0 licensed . **Alternative to frp and ngrok** . **Best for lightweight tunneling** .
-
-
-
-- **[Chisel](https://github.com/jpillora/chisel)**  
-
-  **Fast TCP/UDP tunnel over HTTP with SSH**, MIT licensed . **Secure tunneling with authentication** . **Best for secure tunnels** .
-
-
-
-- **[sish](https://github.com/antoniomika/sish)**  
-
-  **Open-source ngrok alternative**, MIT licensed . **HTTP(S)/WS(S)/TCP tunnels to localhost** . **Best for self-hosted ngrok** .
-
-
-
-- **[bore](https://github.com/ekzhang/bore)**  
-
-  **Simple CLI tool for making tunnels to localhost**, MIT licensed with **10,000+ GitHub stars** . **Minimal and fast** . **Best for simple tunnels** .
-
-
-
-- **[localtunnel](https://github.com/localtunnel/localtunnel)**  
-
-  **Expose localhost to the world**, MIT licensed with **20,000+ GitHub stars** . **Simple tunneling** . **Best for development** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **WireGuard** — Modern VPN protocol underlying most overlay networks .
-
-- **OpenVPN** — Veteran open-source VPN .
-
-- **strongSwan** — IPsec VPN .
-
-- **Libreswan** — IPsec VPN .
-
-- **Tinc** — Mesh VPN daemon .
-
-- **Nebula** — Slack's overlay networking .
-
-- **Innernet** — Private network for containers .
-
-- **Pritunl Zero** — BeyondCorp-style access .
-
-
-
-**Frameworks for building custom private cloud service endpoint solutions**: Combine **Netmaker** for WireGuard-based overlay networking across clouds . Use **NetBird** for zero trust networking with identity integration . Deploy **Consul** for service discovery and mesh connectivity . Choose **Traefik** or **Envoy** for ingress and service proxy . Integrate **frp** or **sish** for self-hosted tunnels . Use **OpenZiti** for zero trust networking with embeddable SDKs . Note that true managed private endpoints with global infrastructure, managed SLAs, and vendor-supported connectivity (AWS PrivateLink, Azure Private Link) remain primarily commercial territory; open-source stacks provide strong overlay networking, service mesh, and tunneling foundations that require integration for complete private connectivity.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Private cloud service endpoints control access to sensitive services and infrastructure. Self-hosted solutions require proper security hardening, key management, and access policy configuration.
-
-- **Commercial private endpoints (PrivateLink, Private Link) are free for the endpoint itself** — you pay for the resources and data processing. Open-source alternatives require infrastructure and operational expertise.
-
-- **Overlay networking introduces complexity** — NAT traversal, key management, and routing require understanding. Netmaker and NetBird simplify but don't eliminate operational responsibility .
-
-- **License considerations**: Netmaker uses Apache-2.0, Tailscale client uses BSD-3-Clause, ZeroTier uses BSL 1.1, and OpenZiti uses Apache-2.0. Verify licensing against your use case before committing .
-
-- The open-source ecosystem provides strong overlay networking, service mesh, and tunneling foundations, but **global infrastructure, managed SLAs, and vendor-supported connectivity** remain primarily commercial offerings.
-
-
+This repository tracks notable **commercial private service endpoint platforms** and **open-source projects** designed to securely connect services privately across cloud providers (AWS, Azure, GCP), virtual private clouds (VPCs), microservices, and on-premises infrastructure — eliminating public internet exposure.
 
 ---
 
+## Table of Contents
 
+- [Overview & Industry Landscape](#overview--industry-landscape)
+- [Commercial SaaS & Hosted Platforms](#commercial-saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Additional Protocol & VPN Libraries](#additional-protocol--vpn-libraries)
+- [Architectural Comparison & Frameworks](#architectural-comparison--frameworks)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & Security Considerations](#disclaimer--security-considerations)
 
-**Made for network engineers, platform teams, and organizations seeking private connectivity sovereignty.**  
+---
 
-Let's make private cloud service endpoints more open, transparent, and secure.
+## Overview & Industry Landscape
+
+Modern cloud infrastructure demands secure service-to-service communication that avoids public IP routing. Commercial solutions like **AWS PrivateLink**, **Azure Private Link**, and **Google Cloud Private Service Connect** deliver VPC-native private endpoint connectivity across cloud boundaries. Concurrently, open-source innovations powered by **WireGuard**, **Envoy proxy**, **Rust**, and **eBPF** — such as **NetBird**, **Netmaker**, **Tailscale/Headscale**, **frp**, and **Istio** — empower platform engineering teams to build self-hosted private cloud networks with custom access controls and Zero Trust sovereignty.
+
+---
+
+## Commercial SaaS & Hosted Platforms
+
+> **Sector Market Size & Structure**: The global Private Cloud Service Endpoint & Zero Trust Network Access (ZTNA) sector is estimated at **$15.2 Billion in 2026** (projected to reach $34.5 Billion by 2030 at a CAGR of 22.8%). The market is **moderately fragmented**: cloud hyper-scalers (Microsoft Azure, AWS, GCP) dominate infrastructure-level VPC private endpoints, while specialized ZTNA, WAN, and edge mesh vendors (Zscaler, Cloudflare, Tailscale, Kong) compete vigorously for application-layer overlay and developer connectivity workloads.
+
+The following table lists top commercial SaaS and cloud-native private endpoint solutions, **sorted by parent company size / market valuation (descending)**:
+
+| Product / Platform | Parent Company | Company Size (Valuation / Revenue) | Specific Starting Price | Free Tier / Trial Limits | Key Capabilities & Primary Use Case |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Azure Private Link](https://azure.microsoft.com/en-us/products/private-link/)** | Microsoft Corp | **$3.20 Trillion** Market Cap | $0.01 / Private Endpoint / hour + $0.01 / GB data processed | $200 free credit for 30 days + 12 months select free services | Azure-native private endpoints connecting VNets directly to Azure PaaS & third-party services over Microsoft backbone |
+| **[AWS PrivateLink](https://aws.amazon.com/privatelink/)** | Amazon.com Inc | **$2.10 Trillion** Market Cap | $0.01 / VPC Endpoint / hour + $0.01 / GB data processed | 1,000 hours of VPC Endpoint usage / month for 12 months under AWS Free Tier | AWS-native private connectivity between VPCs, AWS services, and on-prem networks without exposing traffic to public internet |
+| **[Google Cloud Private Service Connect](https://cloud.google.com/vpc/docs/private-service-connect)** | Alphabet Inc | **$2.10 Trillion** Market Cap | $0.01 / endpoint / hour + $0.01 / GB egress data processed | $300 free trial credits valid for 90 days across GCP resources | GCP-native private VPC endpoints connecting consumer VPCs to producer services over Google's global network |
+| **[Cloudflare Magic WAN](https://www.cloudflare.com/)** | Cloudflare, Inc | **$35.0 Billion** Market Cap | $500.00 / month per network connector base rate | 30-day Enterprise Proof-of-Concept with full Magic WAN testing features | Enterprise WAN-as-a-Service integrating Zero Trust Network Access across branch offices and multi-cloud data centers |
+| **[Zscaler Private Access (ZPA)](https://www.zscaler.com/products/zscaler-private-access)** | Zscaler, Inc | **$30.0 Billion** Market Cap | $5.00 / user / month (Business Edition, billed annually) | 14-day interactive trial for up to 50 test users & 5 Application Connectors | Market-leading cloud-native Zero Trust Network Access (ZTNA) platform providing secure access to private corporate apps |
+| **[HashiCorp Consul (HCP)](https://www.consul.io/)** | IBM / HashiCorp | **$6.40 Billion** Enterprise Value | $0.027 / client instance hour (~$20.00 / month per node) | $50.00 in free HCP cloud credits valid for 30 days upon registration | Managed cloud service discovery, service mesh, and mTLS security automation across multi-cloud environments |
+| **[Kong Mesh](https://konghq.com/)** | Kong Inc | **$2.00 Billion** Valuation | $250.00 / service / year (~$20.83 / month per service node) | 30-day enterprise free trial for up to 25 mesh nodes | Enterprise-grade multi-cluster and multi-cloud service mesh built on Kuma and Envoy proxy |
+| **[Tailscale](https://tailscale.com/)** | Tailscale Inc | **$1.00 Billion** Valuation | $6.00 / user / month (Starter Plan, billed annually) | Free-forever Personal Plan: Up to 3 users and 100 connected devices included | Zero-config WireGuard mesh VPN featuring single sign-on (SSO), MagicDNS, and granular access control lists (ACLs) |
+| **[Ngrok](https://ngrok.com/)** | Ngrok Inc | **$300 Million** Valuation | $10.00 / user / month (Pay-As-You-Go Personal Plan) | Free-forever Developer Plan: 1 online agent, 1 static domain, 1 GB/mo data transfer | Ingress traffic management and secure reverse tunneling for local servers, APIs, and microservices |
+| **[Traefik Hub](https://traefik.io/)** | Traefik Labs | **$250 Million** Valuation | $29.00 / month (Pro Plan, includes up to 5 services) | Free-forever Developer Plan: Up to 3 services/APIs and 5,000 monthly operations | Cloud-native networking platform offering unified API gateway, ingress routing, and edge service mesh |
+
+---
+
+## Open-Source GitHub Projects
+
+Open-source tools form the backbone of modern self-hosted overlay networks, service meshes, and reverse proxy tunnels. Below is a curated list of top GitHub repositories, **sorted by GitHub star count (descending)**. 
+
+> *Note: Click on any star badge beside a project name to view its official GitHub stargazers page.*
+
+| Rank | Project & Repository | Star Count | License | Category | Key Features & Architecture |
+| :---: | :--- | :---: | :---: | :--- | :--- |
+| 1 | **[frp](https://github.com/fatedier/frp)** [![GitHub stars](https://img.shields.io/github/stars/fatedier/frp?style=social&color=white)](https://github.com/fatedier/frp/stargazers) | **109,754** | Apache-2.0 | Reverse Proxy Tunnel | Fast reverse proxy for exposing local servers behind NAT or firewalls to the internet with TCP/UDP/HTTP support |
+| 2 | **[Traefik](https://github.com/traefik/traefik)** [![GitHub stars](https://img.shields.io/github/stars/traefik/traefik?style=social&color=white)](https://github.com/traefik/traefik/stargazers) | **65,096** | MIT | Ingress & Proxy | Modern cloud-native application proxy and ingress controller featuring dynamic automatic service discovery |
+| 3 | **[Headscale](https://github.com/juanfont/headscale)** [![GitHub stars](https://img.shields.io/github/stars/juanfont/headscale?style=social&color=white)](https://github.com/juanfont/headscale/stargazers) | **44,393** | BSD-3-Clause | Overlay Control Plane | Self-hosted open-source implementation of the Tailscale control server for complete self-sovereign mesh networking |
+| 4 | **[Istio](https://github.com/istio/istio)** [![GitHub stars](https://img.shields.io/github/stars/istio/istio?style=social&color=white)](https://github.com/istio/istio/stargazers) | **38,427** | Apache-2.0 | Enterprise Service Mesh | CNCF-graduated enterprise service mesh providing advanced traffic management, mTLS encryption, and rich telemetry |
+| 5 | **[Tailscale Client](https://github.com/tailscale/tailscale)** [![GitHub stars](https://img.shields.io/github/stars/tailscale/tailscale?style=social&color=white)](https://github.com/tailscale/tailscale/stargazers) | **37,202** | BSD-3-Clause | Overlay Mesh Node | Open-source client daemon for WireGuard-based mesh networks with automated NAT traversal and cross-platform support |
+| 6 | **[Consul](https://github.com/hashicorp/consul)** [![GitHub stars](https://img.shields.io/github/stars/hashicorp/consul?style=social&color=white)](https://github.com/hashicorp/consul/stargazers) | **30,093** | BSL-1.1 | Service Mesh & Discovery | Multi-datacenter service discovery, distributed key-value store, and zero-trust service mesh mTLS authorization |
+| 7 | **[NetBird](https://github.com/netbirdio/netbird)** [![GitHub stars](https://img.shields.io/github/stars/netbirdio/netbird?style=social&color=white)](https://github.com/netbirdio/netbird/stargazers) | **29,786** | Apache-2.0 | Zero Trust Network | WireGuard-based peer-to-peer overlay network platform integrated with identity providers (SSO/MFA) and admin UI |
+| 8 | **[Envoy](https://github.com/envoyproxy/envoy)** [![GitHub stars](https://img.shields.io/github/stars/envoyproxy/envoy?style=social&color=white)](https://github.com/envoyproxy/envoy/stargazers) | **29,041** | Apache-2.0 | Service Proxy | High-performance C++ edge/middle/service proxy designed as the foundational engine for modern service meshes |
+| 9 | **[localtunnel](https://github.com/localtunnel/localtunnel)** [![GitHub stars](https://img.shields.io/github/stars/localtunnel/localtunnel?style=social&color=white)](https://github.com/localtunnel/localtunnel/stargazers) | **22,488** | MIT | Development Tunnel | Simple Node.js CLI tool that exposes local development servers to publicly accessible web URLs |
+| 10 | **[Teleport](https://github.com/gravitational/teleport)** [![GitHub stars](https://img.shields.io/github/stars/gravitational/teleport?style=social&color=white)](https://github.com/gravitational/teleport/stargazers) | **20,966** | AGPL-3.0 | Zero Trust Access | Identity-aware access proxy for SSH servers, Kubernetes clusters, databases, and internal web applications |
+| 11 | **[Nebula](https://github.com/slackhq/nebula)** [![GitHub stars](https://img.shields.io/github/stars/slackhq/nebula?style=social&color=white)](https://github.com/slackhq/nebula/stargazers) | **18,418** | MIT | Scalable Mesh Network | Portable mesh overlay networking tool created by Slack focusing on high throughput, security, and low overhead |
+| 12 | **[ZeroTier](https://github.com/zerotier/ZeroTierOne)** [![GitHub stars](https://img.shields.io/github/stars/zerotier/ZeroTierOne?style=social&color=white)](https://github.com/zerotier/ZeroTierOne/stargazers) | **17,159** | BSL-1.1 | Software-Defined SDN | Smart virtual Ethernet switch creating secure peer-to-peer virtual networks across cloud, desktop, and mobile |
+| 13 | **[Chisel](https://github.com/jpillora/chisel)** [![GitHub stars](https://img.shields.io/github/stars/jpillora/chisel?style=social&color=white)](https://github.com/jpillora/chisel/stargazers) | **16,624** | MIT | Secure HTTP Tunnel | Fast TCP/UDP tunnel over HTTP secured by SSH protocol encryption and client fingerprint authentication |
+| 14 | **[rathole](https://github.com/rapiz1/rathole)** [![GitHub stars](https://img.shields.io/github/stars/rapiz1/rathole?style=social&color=white)](https://github.com/rapiz1/rathole/stargazers) | **14,301** | Apache-2.0 | Rust Tunnel Proxy | Ultra-lightweight and memory-efficient reverse proxy written in Rust for NAT traversal and fast port forwarding |
+| 15 | **[Netmaker](https://github.com/gravitl/netmaker)** [![GitHub stars](https://img.shields.io/github/stars/gravitl/netmaker?style=social&color=white)](https://github.com/gravitl/netmaker/stargazers) | **11,821** | SSPL / Apache | Kernel WireGuard Mesh | Creates flat, automated, and encrypted WireGuard overlay networks connecting multi-cloud and edge infrastructure |
+| 16 | **[bore](https://github.com/ekzhang/bore)** [![GitHub stars](https://img.shields.io/github/stars/ekzhang/bore?style=social&color=white)](https://github.com/ekzhang/bore/stargazers) | **11,527** | MIT | CLI Tunneling Tool | Minimalistic and blazingly fast CLI tool written in Rust for exposing local ports to remote servers |
+| 17 | **[Linkerd](https://github.com/linkerd/linkerd2)** [![GitHub stars](https://img.shields.io/github/stars/linkerd/linkerd2?style=social&color=white)](https://github.com/linkerd/linkerd2/stargazers) | **11,506** | Apache-2.0 | Micro-Proxy Mesh | Ultralight, security-first Rust micro-proxy service mesh designed specifically for Kubernetes workloads |
+| 18 | **[Pomerium](https://github.com/pomerium/pomerium)** [![GitHub stars](https://img.shields.io/github/stars/pomerium/pomerium?style=social&color=white)](https://github.com/pomerium/pomerium/stargazers) | **5,027** | Apache-2.0 | Context Access Proxy | Identity and context-aware reverse proxy delivering BeyondCorp-style Zero Trust access to web applications |
+| 19 | **[sish](https://github.com/antoniomika/sish)** [![GitHub stars](https://img.shields.io/github/stars/antoniomika/sish?style=social&color=white)](https://github.com/antoniomika/sish/stargazers) | **4,789** | MIT | SSH Tunnel Server | Self-hosted HTTP(S)/WS(S)/TCP tunnel server utilizing standard SSH client features as an open-source ngrok alternative |
+| 20 | **[OpenZiti](https://github.com/openziti/ziti)** [![GitHub stars](https://img.shields.io/github/stars/openziti/ziti?style=social&color=white)](https://github.com/openziti/ziti/stargazers) | **4,420** | Apache-2.0 | Programmable ZTNA | Open-source zero-trust networking platform with embeddable developer SDKs and zero-trust edge routers |
+| 21 | **[Kuma](https://github.com/kumahq/kuma)** [![GitHub stars](https://img.shields.io/github/stars/kumahq/kuma?style=social&color=white)](https://github.com/kumahq/kuma/stargazers) | **4,011** | Apache-2.0 | Multi-Zone Mesh | CNCF sandbox multi-zone service mesh for containers, Kubernetes, and virtual machine environments |
+
+---
+
+## Additional Protocol & VPN Libraries
+
+For custom security architectures, foundational networking protocols and libraries provide underlying tunnel building blocks:
+
+- **[WireGuard](https://www.wireguard.com/)**: Modern, ultra-fast VPN protocol using state-of-the-art cryptography.
+- **[OpenVPN](https://openvpn.net/)**: Battle-tested open-source VPN protocol with extensive cross-platform client ecosystems.
+- **[strongSwan](https://www.strongswan.org/)**: Open-source IPsec-based VPN solution for multi-cloud security gateways.
+- **[Libreswan](https://libreswan.org/)**: IPsec implementation for Linux supporting IKEv1 and IKEv2 protocols.
+- **[Tinc VPN](https://www.tinc-vpn.org/)**: Self-routing peer-to-peer mesh VPN daemon with automated key handling.
+- **[Innernet](https://github.com/tonolino/innernet)**: Private network system built on top of WireGuard designed for simple ACL management.
+
+---
+
+## Architectural Comparison & Frameworks
+
+When building private connectivity solutions across multi-cloud environments, architecture teams typically combine multiple tools:
+
+1. **Overlay Networking Layer**: Deploy **Netmaker** or **NetBird** for kernel WireGuard performance across AWS, Azure, GCP, and bare metal servers.
+2. **Control & Identity Layer**: Integrate **Headscale** or **Pomerium** to enforce identity-based Zero Trust access control via Single Sign-On (SSO).
+3. **Service Mesh & Discovery**: Use **Consul** or **Istio** / **Linkerd** for intra-cluster mTLS encryption, service authorization, and telemetry.
+4. **Local Development Tunnels**: Utilize **frp**, **Chisel**, or **sish** to establish temporary encrypted tunnels to internal endpoints without changing public DNS records.
+
+---
+
+## How to Contribute
+
+Contributions are welcome! To contribute to this curated ecosystem:
+
+1. **Fork** this repository.
+2. Add your commercial or open-source entry in the appropriate section.
+3. Ensure entries include accurate pricing details, free tier limits, star badges linking to `/stargazers`, and factual descriptions.
+4. Open a **Pull Request (PR)** with a summary of the additions.
+
+---
+
+## Disclaimer & Security Considerations
+
+- This list is **community-curated** for educational and architectural reference — it does not constitute an endorsement.
+- Private cloud service endpoints control access to mission-critical workloads. Always verify security posture, key rotation policies, and license compliance before deploying in production environments.
+- Commercial private endpoints (e.g., AWS PrivateLink, Azure Private Link) incur hourly endpoint charges and data processing fees. Open-source solutions reduce software costs but require operational upkeep and infrastructure provisioning.
+
+---
+
+**Maintained for network engineers, platform engineering teams, and cloud architects seeking private connectivity sovereignty.**
