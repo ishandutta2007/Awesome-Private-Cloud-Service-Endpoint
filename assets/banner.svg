@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d17" />
+      <stop offset="50%" stop-color="#121829" />
+      <stop offset="100%" stop-color="#1a103c" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Node Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseNode {
+      0%, 100% { r: 6px; opacity: 0.6; }
+      50% { r: 10px; opacity: 1; filter: drop-shadow(0 0 10px #38bdf8); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.7; }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .node-pulse { animation: pulseNode 3s infinite ease-in-out; }
+    .bg-glow { animation: pulseGlow 4s infinite ease-in-out; }
+    .flow-path { stroke-dasharray: 10, 10; animation: flowLine 5s linear infinite; }
+    .floating-element { animation: floatParticle 4s infinite ease-in-out; }
+    .title-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; }
+    .sub-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="350" fill="url(#bgGradient)" rx="16" />
+
+  <!-- Animated Glowing Orbs Background (Deep Layer) -->
+  <circle cx="200" cy="100" r="140" fill="#38bdf8" opacity="0.12" class="bg-glow" filter="url(#glow)" />
+  <circle cx="1000" cy="250" r="160" fill="#c084fc" opacity="0.12" class="bg-glow" filter="url(#glow)" />
+
+  <!-- Animated Network Connections (Middle Background Layer) -->
+  <g opacity="0.35">
+    <path d="M 100,100 Q 300,50 500,150 T 900,100 T 1100,280" fill="none" stroke="#38bdf8" stroke-width="2" class="flow-path" />
+    <path d="M 50,280 Q 250,320 600,220 T 1000,80" fill="none" stroke="#818cf8" stroke-width="1.5" class="flow-path" />
+    <path d="M 300,300 Q 500,100 800,290" fill="none" stroke="#c084fc" stroke-width="1.5" class="flow-path" />
+  </g>
+
+  <!-- Decorative Network Nodes (Non-obstructive edges) -->
+  <g class="floating-element">
+    <circle cx="120" cy="90" fill="#38bdf8" class="node-pulse" />
+    <circle cx="280" cy="60" fill="#818cf8" class="node-pulse" style="animation-delay: 0.5s;" />
+    <circle cx="1080" cy="260" fill="#c084fc" class="node-pulse" style="animation-delay: 1s;" />
+    <circle cx="950" cy="80" fill="#38bdf8" class="node-pulse" style="animation-delay: 1.5s;" />
+    <circle cx="80" cy="270" fill="#818cf8" class="node-pulse" style="animation-delay: 2s;" />
+  </g>
+
+  <!-- Foreground Backdrop Shield Card (Guarantees Text Legibility) -->
+  <rect x="150" y="60" width="900" height="230" fill="#0f172a" fill-opacity="0.75" rx="20" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Main Title Foreground -->
+  <g text-anchor="middle">
+    <!-- Main Title -->
+    <text x="600" y="145" class="title-text" font-size="34" fill="url(#textGrad)" letter-spacing="1.5">
+      AWESOME PRIVATE CLOUD SERVICE ENDPOINT
+    </text>
+
+    <!-- Divider Line -->
+    <line x1="400" y1="175" x2="800" y2="175" stroke="#38bdf8" stroke-width="2" opacity="0.6" stroke-dasharray="100 10" />
+
+    <!-- Subtitle -->
+    <text x="600" y="215" class="sub-text" font-size="18" fill="#e2e8f0" letter-spacing="0.8">
+      🔒 Zero Trust Access • 🌐 VPC PrivateLink • 🕸️ WireGuard Mesh • 🚀 Reverse Tunnels
+    </text>
+
+    <!-- Tagline Pills -->
+    <g transform="translate(360, 240)">
+      <rect x="0" y="0" width="140" height="28" fill="#1e293b" rx="14" stroke="#38bdf8" stroke-width="1" />
+      <text x="70" y="18" font-size="12" fill="#38bdf8" class="sub-text">SaaS Ecosystem</text>
+      
+      <rect x="160" y="0" width="160" height="28" fill="#1e293b" rx="14" stroke="#818cf8" stroke-width="1" />
+      <text x="240" y="18" font-size="12" fill="#818cf8" class="sub-text">Open-Source Repos</text>
+
+      <rect x="340" y="0" width="140" height="28" fill="#1e293b" rx="14" stroke="#c084fc" stroke-width="1" />
+      <text x="410" y="18" font-size="12" fill="#c084fc" class="sub-text">Star-Ranked</text>
+    </g>
+  </g>
+</svg>
