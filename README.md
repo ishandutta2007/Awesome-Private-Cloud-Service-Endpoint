@@ -62,7 +62,7 @@ The following table lists top commercial SaaS and cloud-native private endpoint 
 
 ## 🔓 Open-Source GitHub Projects
 
-Open-source tools form the backbone of modern self-hosted overlay networks, service meshes, and reverse proxy tunnels. Below is a curated list of top GitHub repositories, **sorted by GitHub Stars_Count (descending)**. 🌟
+Open-source tools form the backbone of modern self-hosted overlay networks, service meshes, and reverse proxy tunnels. Below is a curated list of top GitHub repositories, **sorted by GitHub_Stars_Count (descending)**. 🌟
 
 > 💡 *Note: Click on any Stars_Badge beside a project name to view its official GitHub stargazers page.*
 
